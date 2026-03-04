@@ -1,17 +1,14 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Listing {
+export class Tag {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  description: string;
+  content: string;
 
-  @Column()
-  rating: number;
-
-  constructor(item: Partial<Listing>) {
+  constructor(item: Partial<Tag>) {
     Object.assign(this, item);
   }
 }
